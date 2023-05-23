@@ -1,0 +1,131 @@
+/* variables */
+:root {
+    --primary: hsl(31, 77%, 52%);
+    --secondary: hsl(184, 100%, 22%);
+    --tertiary: hsl(179, 100%, 13%);
+    --paragraph: hsla(0, 0%, 100%, 0.75);
+    --background: hsl(0, 0%, 95%);
+}
+
+/* reset */
+* {
+    box-sizing: border-box;
+}
+
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+/* fonts */
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    color: white;
+}
+
+p, a {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* base style */
+body {
+    background: var(--background);
+}
+
+a.button {
+    background-color: var(--background);
+    padding: 1em 3em;
+    border-radius: 30px;
+}
+
+a.button:active {
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+}
+
+/* mobile style */
+.grid {
+    display: grid;
+    grid-template-columns: 400px;
+    justify-content: center;
+}
+
+.column-preview {
+    margin: 100px 0;
+}
+
+.card {
+    padding: 4em 3em;
+}
+
+.card h1 {
+    margin: 30px 0;
+}
+
+.description {
+    margin-bottom: 60px;
+    color: var(--paragraph);
+    line-height: 1.8rem;
+}
+
+.card:nth-child(1) {
+    border-radius: 15px 15px 0 0;
+}
+
+.card:nth-child(3) {
+    border-radius: 0 0 15px 15px;
+}
+
+.sedan {
+    background-color: var(--primary);
+}
+
+.sedan .button {
+    color: var(--primary);
+}
+
+.suvs {
+    background-color: var(--secondary);
+}
+
+.suvs .button {
+    color: var(--secondary);
+}
+
+.luxury {
+    background-color: var(--tertiary);
+}
+
+.luxury .button {
+    color: var(--tertiary);
+}
+
+/* desktop style */
+@media screen and (min-width: 1200px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 400px);
+        justify-content: center;
+    }
+
+    .column-preview {
+        margin: 20vh 0;
+    }
+
+    .card:nth-child(1) {
+        border-radius: 15px 0 0 15px;
+    }
+    
+    .card:nth-child(3) {
+        border-radius: 0 15px 15px 0;
+    }
+}
